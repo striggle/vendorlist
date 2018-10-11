@@ -10,6 +10,16 @@ $().ready(function() {
 
 function render(jsonResponse) {
     var tbody = $("#tb");
-    var products = jsonResponse.data;
-    for(var)
+    var vendors = jsonResponse.data;
+    for(var vendor of vendors) {
+        var row = "<tr>";
+        row += "<td>" + vendor.id + "</td>";
+        row += "<td>" + vendor.code + "</td>";
+        row += "<td>" + vendor.name + "</td>";
+        row += "<td>" + vendor.email + "</td>";
+        row += "<td>" + vendor.zip + "</td>";
+        row += "<td>" + vendor.phoneNumber + "</td>";
+        row += "<tr>";
+        tbody.append(row)
+    }
 }
